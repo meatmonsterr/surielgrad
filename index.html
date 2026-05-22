@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Graduation Invitation</title>
+
+<!-- GRADUATION FONT -->
+<style>
+@import url('https://fonts.cdnfonts.com/css/graduation');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+</style>
+
+<style>
+
+*{
+  box-sizing:border-box;
+}
+
+body{
+  margin:0;
+  background:#EFEBDC;
+  overflow-x:hidden;
+  font-family:'Montserrat', sans-serif;
+  color:#2c2c2c;
+}
+
+/* MAIN */
+.container{
+  width:100%;
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  padding:80px 20px;
+  position:relative;
+}
+
+/* STARS */
+.star{
+  position:fixed;
+  top:-30px;
+  width:24px;
+  height:24px;
+
+  clip-path: polygon(
+    50% 0%, 61% 35%, 98% 35%, 68% 57%,
+    79% 91%, 50% 70%, 21% 91%, 32% 57%,
+    2% 35%, 39% 35%
+  );
+
+  opacity:.9;
+  z-index:0;
+
+  animation:fall linear forwards;
+}
+
+@keyframes fall{
+  to{
+    transform:
+      translateY(110vh)
+      rotate(360deg)
+      scale(0);
+
+    opacity:0;
+  }
+}
+
+/* CARD */
+.invitation{
+  position:relative;
+  z-index:2;
+  width:100%;
+  max-width:900px;
+  text-align:center;
+}
+
+/* BABY PHOTO */
+.baby-photo{
+  width:280px;
+  height:280px;
+  border-radius:50%;
+  object-fit:cover;
+
+  border:10px solid white;
+
+  box-shadow:
+    0 10px 35px rgba(0,0,0,.12);
+
+  margin-bottom:40px;
+}
+
+/* NAME */
+.name-wrapper{
+  display:flex;
+  justify-content:center;
+}
+
+.name{
+  font-family:'Graduation', sans-serif;
+  font-size:95px;
+  color:#111;
+
+  letter-spacing:4px;
+
+  overflow:hidden;
+  white-space:nowrap;
+
+  border-right:4px solid #111;
+
+  width:0;
+
+  animation:
+    typing 3.5s steps(30,end) forwards,
+    blink .7s infinite;
+}
+
+@keyframes typing{
+  from{
+    width:0;
+  }
+
+  to{
+    width:100%;
+  }
+}
+
+@keyframes blink{
+  50%{
+    border-color:transparent;
+  }
+}
+
+/* SUBTITLE */
+.subtitle{
+  margin-top:25px;
+
+  color:#7A52A1;
+
+  font-size:24px;
+  font-weight:700;
+
+  letter-spacing:8px;
+}
+
+/* LOCATION */
+.location{
+  margin-top:18px;
+
+  font-size:22px;
+  font-weight:500;
+
+  letter-spacing:2px;
+}
+
+/* BUTTON */
+.address-btn{
+  display:inline-block;
+
+  margin-top:55px;
+
+  padding:16px 42px;
+
+  border-radius:999px;
+
+  background:#7A52A1;
+
+  color:white;
+
+  text-decoration:none;
+
+  font-size:18px;
+  font-weight:600;
+
+  transition:.3s ease;
+
+  box-shadow:
+    0 10px 25px rgba(122,82,161,.25);
+}
+
+.address-btn:hover{
+  transform:translateY(-3px);
+}
+
+/* INFO SECTION */
+.info-section{
+  width:100%;
+  max-width:900px;
+
+  margin-top:90px;
+
+  background:white;
+
+  border-radius:35px;
+
+  padding:60px;
+
+  box-shadow:
+    0 10px 30px rgba(0,0,0,.08);
+
+  position:relative;
+  z-index:2;
+}
+
+/* HEADER */
+.info-header{
+  text-align:center;
+
+  color:#7A52A1;
+
+  font-size:40px;
+  font-weight:700;
+
+  letter-spacing:6px;
+
+  margin-bottom:50px;
+}
+
+/* BLOCKS */
+.info-block{
+  margin-bottom:45px;
+}
+
+.info-title{
+  font-size:24px;
+  font-weight:700;
+
+  margin-bottom:18px;
+
+  letter-spacing:2px;
+}
+
+.info-text{
+  font-size:17px;
+
+  line-height:1.9;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+
+  .baby-photo{
+    width:220px;
+    height:220px;
+  }
+
+  .name{
+    font-size:55px;
+  }
+
+  .subtitle{
+    font-size:18px;
+    letter-spacing:5px;
+  }
+
+  .location{
+    font-size:18px;
+  }
+
+  .info-section{
+    padding:35px 25px;
+  }
+
+  .info-header{
+    font-size:28px;
+  }
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <div class="invitation">
+
+    <!-- CAMBIA baby.jpg POR TU FOTO -->
+    <img src="baby.jpg" class="baby-photo">
+
+    <div class="name-wrapper">
+      <div class="name">
+        SURIEL ZAMUDIO
+      </div>
+    </div>
+
+    <div class="subtitle">
+      AVHS CLASS OF 2026
+    </div>
+
+    <div class="location">
+      Linda Ronstadt Music Hall
+    </div>
+
+    <!-- ADDRESS BUTTON -->
+    <a class="address-btn"
+       href="https://maps.app.goo.gl/vbqbLUkQrp8ppB4K6?g_st=ic"
+       target="_blank">
+
+      DIRECCIÓN
+
+    </a>
+
+  </div>
+
+  <!-- INFO -->
+  <div class="info-section">
+
+    <div class="info-header">
+      INDICACIONES
+    </div>
+
+    <!-- PARKING -->
+    <div class="info-block">
+
+      <div class="info-title">
+        PARKING
+      </div>
+
+      <div class="info-text">
+        Durante la ceremonia: El costo es de $15 en el garaje.
+        También puedes buscar parquímetros (pago con monedas)
+        o usar la aplicación "Premium Parking".
+        Se recomienda compartir vehículo.
+      </div>
+
+    </div>
+
+    <!-- CEREMONY -->
+    <div class="info-block">
+
+      <div class="info-title">
+        CEREMONIA
+      </div>
+
+      <div class="info-text">
+
+        El número de asiento en el ticket no importa,
+        se puede sentar donde quieran y se recomienda
+        llegar temprano para tomar lugar adelante
+        (excepto lugares reservados).
+        <br><br>
+
+        • Apertura de puertas:
+        A las 5:00 p.m.
+        El acceso a la orquesta (piso bajo)
+        cierra a las 5:50 p.m.;
+        después de esa hora,
+        los invitados serán dirigidos al balcón.
+        <br><br>
+
+        • Objetos prohibidos:
+        No se permiten globos,
+        cornetas, confeti,
+        serpentinas en aerosol
+        ni inflables dentro del teatro.
+        El uso de confeti
+        conlleva una multa de $500.
+        <br><br>
+
+        • Bolsas:
+        Solo se permiten
+        bolsas o carteras transparentes
+        (tamaño máximo 14x16 pulgadas).
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+<script>
+
+/* ⭐ FALLING STARS */
+
+const colors = [
+  "#CDB4DB",
+  "#A2D2FF",
+  "#FFC8DD",
+  "#BDE0FE",
+  "#D8B4FE",
+  "#FFD166"
+];
+
+function createStar(){
+
+  const star = document.createElement("div");
+
+  star.className = "star";
+
+  star.style.left =
+    Math.random() * window.innerWidth + "px";
+
+  star.style.background =
+    colors[Math.floor(Math.random() * colors.length)];
+
+  star.style.animationDuration =
+    (Math.random() * 3 + 2) + "s";
+
+  const size =
+    (Math.random() * 18 + 10) + "px";
+
+  star.style.width = size;
+  star.style.height = size;
+
+  document.body.appendChild(star);
+
+  setTimeout(()=>{
+    star.remove();
+  },5000);
+}
+
+setInterval(createStar, 120);
+
+</script>
+
+</body>
+</html>
