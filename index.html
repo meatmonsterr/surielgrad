@@ -6,10 +6,10 @@
 
 <title>Graduation Invitation</title>
 
-<!-- GRADUATION FONT -->
+<!-- FONTS -->
 <style>
-@import url('https://fonts.cdnfonts.com/css/graduation');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.cdnfonts.com/css/graduation-2');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap');
 </style>
 
 <style>
@@ -22,18 +22,23 @@ body{
   margin:0;
   background:#EFEBDC;
   overflow-x:hidden;
-  font-family:'Montserrat', sans-serif;
-  color:#6B5A4A;
+
+  font-family:'Cormorant Garamond', serif;
+  color:#5E5245;
 }
 
 /* MAIN */
 .container{
   width:100%;
   min-height:100vh;
-  padding:80px 20px 100px;
+
+  padding:70px 20px 110px;
+
   display:flex;
-  flex-direction:column;
+  justify-content:center;
   align-items:center;
+  flex-direction:column;
+
   position:relative;
 }
 
@@ -42,17 +47,18 @@ body{
   position:fixed;
   top:-30px;
 
-  width:24px;
-  height:24px;
+  width:22px;
+  height:22px;
+
+  opacity:.85;
+
+  z-index:0;
 
   clip-path: polygon(
     50% 0%, 61% 35%, 98% 35%, 68% 57%,
     79% 91%, 50% 70%, 21% 91%, 32% 57%,
     2% 35%, 39% 35%
   );
-
-  opacity:.9;
-  z-index:0;
 
   animation:fall linear forwards;
 }
@@ -79,89 +85,104 @@ body{
   text-align:center;
 }
 
-/* PHOTO SPACE */
-.photo-space{
-
+/* PHOTO */
+.photo{
   width:340px;
-  height:340px;
 
   margin:auto;
   margin-bottom:45px;
 
-  display:flex;
-  align-items:center;
-  justify-content:center;
+  display:block;
 
-  border:3px dashed rgba(122,82,161,.35);
-
-  background:rgba(255,255,255,.25);
-
-}
-
-/* PLACEHOLDER TEXT */
-.photo-space span{
-  color:#7A52A1;
-  font-size:18px;
-  letter-spacing:2px;
+  filter:
+    drop-shadow(0 12px 24px rgba(0,0,0,.08));
 }
 
 /* NAME */
 .name{
   font-family:'Graduation', sans-serif;
 
-  font-size:95px;
+  color:#111;
 
-  color:black;
+  line-height:.9;
 
   letter-spacing:4px;
 
-  margin-bottom:18px;
+  margin-bottom:28px;
+}
+
+.name span{
+  display:block;
+}
+
+.name .first{
+  font-size:105px;
+}
+
+.name .last{
+  font-size:105px;
 }
 
 /* SUBTITLE */
 .subtitle{
-  color:#7A52A1;
 
-  font-size:26px;
-  font-weight:700;
+  color:#6D587A;
+
+  font-size:28px;
+  font-weight:600;
 
   letter-spacing:8px;
 
-  margin-bottom:18px;
+  margin-top:18px;
 }
 
 /* LOCATION */
 .location{
-  font-size:22px;
 
-  letter-spacing:2px;
+  margin-top:18px;
 
-  margin-bottom:55px;
+  font-size:32px;
+  font-weight:500;
+  font-style:italic;
 
-  color:#6B5A4A;
+  color:#6A5A4B;
+}
+
+/* DIVIDER */
+.divider{
+
+  width:120px;
+  height:1px;
+
+  background:#8A7969;
+
+  margin:38px auto;
 }
 
 /* BUTTON */
 .address-btn{
+
   display:inline-block;
 
-  padding:16px 42px;
-
-  background:#7A52A1;
-
-  color:white;
-
-  text-decoration:none;
+  padding:16px 44px;
 
   border-radius:999px;
 
-  font-size:18px;
+  text-decoration:none;
+
+  background:#6D587A;
+
+  color:white;
+
+  font-size:19px;
   font-weight:600;
+
+  letter-spacing:1px;
 
   transition:.3s ease;
 
   box-shadow:
-    0 10px 20px rgba(122,82,161,.22);
+    0 10px 24px rgba(109,88,122,.18);
 }
 
 .address-btn:hover{
@@ -172,18 +193,19 @@ body{
 .info-header{
 
   margin-top:100px;
-  margin-bottom:55px;
+  margin-bottom:60px;
 
-  color:#7A52A1;
-
-  font-size:42px;
+  font-size:48px;
   font-weight:700;
 
-  letter-spacing:8px;
+  letter-spacing:10px;
+
+  color:#6D587A;
 }
 
 /* INFO */
 .info{
+
   width:100%;
   max-width:850px;
 
@@ -192,40 +214,42 @@ body{
 
 /* BLOCK */
 .block{
-  margin-bottom:50px;
+  margin-bottom:60px;
 }
 
-/* TITLE */
+/* TITLES */
 .block-title{
-  font-size:26px;
+
+  font-size:34px;
   font-weight:700;
 
-  margin-bottom:20px;
+  letter-spacing:3px;
 
-  color:#6B5A4A;
+  margin-bottom:18px;
 
-  letter-spacing:2px;
+  color:#5E5245;
 }
 
 /* TEXT */
 .block-text{
-  font-size:18px;
 
-  line-height:2;
+  font-size:26px;
 
-  color:#6B5A4A;
+  line-height:1.7;
+
+  color:#5E5245;
 }
 
 /* MOBILE */
 @media(max-width:768px){
 
-  .photo-space{
+  .photo{
     width:240px;
-    height:240px;
   }
 
-  .name{
-    font-size:52px;
+  .name .first,
+  .name .last{
+    font-size:62px;
   }
 
   .subtitle{
@@ -234,19 +258,19 @@ body{
   }
 
   .location{
-    font-size:18px;
-  }
-
-  .info-header{
-    font-size:28px;
-  }
-
-  .block-title{
     font-size:22px;
   }
 
+  .info-header{
+    font-size:30px;
+  }
+
+  .block-title{
+    font-size:24px;
+  }
+
   .block-text{
-    font-size:16px;
+    font-size:18px;
   }
 }
 
@@ -259,14 +283,23 @@ body{
 
   <div class="content">
 
-    <!-- PNG PHOTO SPACE -->
-    <div class="photo-space">
-      <span>PNG PHOTO HERE</span>
-    </div>
+    <!-- PNG PHOTO -->
+    <img
+      src="Untitled1437_20260521165620.jpeg"
+      class="photo"
+    >
 
     <!-- NAME -->
     <div class="name">
-      SURIEL ZAMUDIO
+
+      <span class="first">
+        Suriel
+      </span>
+
+      <span class="last">
+        Zamudio
+      </span>
+
     </div>
 
     <!-- SUBTITLE -->
@@ -278,6 +311,8 @@ body{
     <div class="location">
       Linda Ronstadt Music Hall
     </div>
+
+    <div class="divider"></div>
 
     <!-- BUTTON -->
     <a
@@ -308,19 +343,17 @@ body{
 
           Durante la ceremonia:
           El costo es de $15 en el garaje.
-
           También puedes buscar parquímetros
           (pago con monedas)
           o usar la aplicación
           "Premium Parking".
-
           Se recomienda compartir vehículo.
 
         </div>
 
       </div>
 
-      <!-- CEREMONY -->
+      <!-- CEREMONIA -->
       <div class="block">
 
         <div class="block-title">
@@ -330,11 +363,12 @@ body{
         <div class="block-text">
 
           El número de asiento en el ticket
-          no importa,
+          no importa;
           se puede sentar donde quieran
           y se recomienda llegar temprano
           para tomar lugar adelante
           (excepto lugares reservados).
+
           <br><br>
 
           • Apertura de puertas:
@@ -344,15 +378,18 @@ body{
           cierra a las 5:50 p.m.;
           después de esa hora,
           los invitados serán dirigidos al balcón.
+
           <br><br>
 
           • Objetos prohibidos:
           No se permiten globos,
-          cornetas, confeti,
+          cornetas,
+          confeti,
           serpentinas en aerosol
           ni inflables dentro del teatro.
           El uso de confeti
           conlleva una multa de $500.
+
           <br><br>
 
           • Bolsas:
@@ -372,15 +409,14 @@ body{
 
 <script>
 
-/* ⭐ FALLING STARS */
+/* ⭐ ELEGANT FALLING STARS */
 
 const colors = [
-  "#CDB4DB",
-  "#A2D2FF",
-  "#FFC8DD",
-  "#BDE0FE",
-  "#D8B4FE",
-  "#FFD166"
+  "#CBB27C",
+  "#B39BC8",
+  "#D8C6A5",
+  "#B89BB7",
+  "#D4B483"
 ];
 
 function createStar(){
@@ -396,10 +432,10 @@ function createStar(){
     colors[Math.floor(Math.random() * colors.length)];
 
   star.style.animationDuration =
-    (Math.random() * 3 + 2) + "s";
+    (Math.random() * 4 + 3) + "s";
 
   const size =
-    (Math.random() * 18 + 10) + "px";
+    (Math.random() * 16 + 10) + "px";
 
   star.style.width = size;
   star.style.height = size;
@@ -408,10 +444,10 @@ function createStar(){
 
   setTimeout(()=>{
     star.remove();
-  },5000);
+  },7000);
 }
 
-setInterval(createStar, 120);
+setInterval(createStar, 180);
 
 </script>
 
