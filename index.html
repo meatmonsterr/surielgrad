@@ -84,64 +84,6 @@ body{
 
   text-align:center;
 }
-  /* DESKTOP LAYOUT */
-.hero{
-
-  width:100%;
-
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-
-  gap:70px;
-
-  margin-bottom:80px;
-}
-
-/* LEFT SIDE */
-.left-side{
-
-  flex:1;
-
-  text-align:left;
-}
-
-/* RIGHT SIDE */
-.right-side{
-
-  flex:1;
-
-  display:flex;
-  justify-content:center;
-}
-
-/* PHOTO */
-.photo{
-  width:340px;
-  margin:0;
-
-  display:block;
-
-  filter:
-    drop-shadow(0 12px 24px rgba(0,0,0,.08));
-}
-
-/* MOBILE */
-@media(max-width:768px){
-
-  .hero{
-    flex-direction:column;
-    gap:30px;
-  }
-
-  .left-side{
-    text-align:center;
-  }
-
-  .photo{
-    width:240px;
-  }
-}
 
 /* PHOTO */
 .photo{
@@ -341,10 +283,11 @@ body{
 
   <div class="content">
 
-<div class="hero">
-
-  <!-- LEFT -->
-  <div class="left-side">
+    <!-- PNG PHOTO -->
+    <img
+      src="Untitled1437_20260521165620.jpeg"
+      class="photo"
+    >
 
     <!-- NAME -->
     <div class="name">
@@ -380,21 +323,6 @@ body{
       DIRECCIÓN
 
     </a>
-
-  </div>
-
-  <!-- RIGHT -->
-  <div class="right-side">
-
-    <!-- PHOTO -->
-    <img
-      src="Untitled1437_20260521165620.jpeg"
-      class="photo"
-    >
-
-  </div>
-
-</div>
 
     <!-- HEADER -->
     <div class="info-header">
